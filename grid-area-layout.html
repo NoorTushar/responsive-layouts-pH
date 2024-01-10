@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      main > * {
+        background-color: bisque;
+        border: 1px solid tomato;
+        padding: 50px;
+        border-radius: 5px;
+      }
+      main {
+        display: grid;
+        gap: 15px;
+        grid-template-areas:
+          "header header header header header"
+          "nav article article article aside"
+          "nav article article article advertise"
+          "footer footer footer footer footer";
+      }
+      .header {
+        grid-area: header;
+      }
+      .nav {
+        grid-area: nav;
+      }
+      .aside {
+        grid-area: aside;
+      }
+      .article {
+        grid-area: article;
+      }
+      .advertise {
+        grid-area: advertise;
+      }
+      .footer {
+        grid-area: footer;
+      }
+
+      @media Screen and (max-width: 575.98px) {
+        main {
+          grid-template-areas:
+            "header"
+            "advertise"
+            "nav"
+            "article"
+            "aside"
+            "footer";
+        }
+      }
+
+      @media (min-width: 575.99px) and (max-width: 991.98px) {
+        main {
+          grid-template-areas:
+            "header header header"
+            "nav nav nav"
+            "aside article article"
+            "advertise footer footer";
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header><a href="index.html">Home</a></header>
+    <main>
+      <div class="header">HEADER</div>
+      <div class="nav">NAV</div>
+      <div class="article">ARTICLE</div>
+      <div class="aside">ASIDE</div>
+      <div class="advertise">ADVERTISE</div>
+      <div class="footer">FOOTER</div>
+    </main>
+  </body>
+</html>
