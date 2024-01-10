@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid</title>
+  </head>
+  <style>
+    .myContainer > div {
+      background-color: blueviolet;
+      border: 1px solid black;
+      padding: 20px;
+    }
+    .myContainer {
+      display: grid;
+      gap: 10px;
+      grid-template-areas: "aside box1 box2 box3" "aside box4 box5 box6" "aside box7 box8 box9" "aside footer1 footer1 footer1" "aside footer2 footer2 footer2";
+    }
+    .aside {
+      grid-area: aside;
+    }
+    .box1 {
+      grid-area: box1;
+    }
+    .box2 {
+      grid-area: box2;
+    }
+    .box3 {
+      grid-area: box3;
+    }
+    .box4 {
+      grid-area: box4;
+    }
+    .box5 {
+      grid-area: box5;
+    }
+    .box6 {
+      grid-area: box6;
+    }
+    .box7 {
+      grid-area: box7;
+    }
+    .box8 {
+      grid-area: box8;
+    }
+    .box8 {
+      grid-area: box9;
+    }
+
+    .footer-1 {
+      grid-area: footer1;
+    }
+    .footer-2 {
+      grid-area: footer2;
+    }
+    .container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(3, 200px) 100px 100px;
+      gap: 10px;
+    }
+    .item {
+      background-color: tomato;
+      border: 1px solid black;
+    }
+    #item-1 {
+      grid-row: span 5;
+    }
+    #item-11,
+    #item-12 {
+      grid-column: span 3;
+    }
+  </style>
+  <body>
+    <header><a href="index.html">Home</a></header>
+    <main>
+      <h1>GRID using GRID Areas</h1>
+      <div class="myContainer">
+        <div class="aside">aside</div>
+        <div class="box1">1</div>
+        <div class="box2">2</div>
+        <div class="box3">3</div>
+        <div class="box4">4</div>
+        <div class="box5">5</div>
+        <div class="box6">6</div>
+        <div class="box7">7</div>
+        <div class="box8">8</div>
+        <div class="box9">9</div>
+        <div class="footer-1">footer1</div>
+        <div class="footer-2">footer2</div>
+      </div>
+      <hr />
+
+      <h1>Grid - Using Span - pHB9</h1>
+      <div class="container">
+        <div class="item" id="item-1">Item-1</div>
+        <div class="item" id="item-2">Item-2</div>
+        <div class="item" id="item-3">Item-3</div>
+        <div class="item" id="item-4">Item-4</div>
+        <div class="item" id="item-5">Item-5</div>
+        <div class="item" id="item-6">Item-6</div>
+        <div class="item" id="item-7">Item-7</div>
+        <div class="item" id="item-8">Item-8</div>
+        <div class="item" id="item-9">Item-9</div>
+        <div class="item" id="item-10">Item-10</div>
+        <div class="item" id="item-11">Item-11</div>
+        <div class="item" id="item-12">Item-12</div>
+      </div>
+    </main>
+  </body>
+</html>
